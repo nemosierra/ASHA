@@ -1,0 +1,27 @@
+void setup()
+{
+pinMode(A0,INPUT);
+Serial.begin(9600);
+}
+void loop()
+{
+  int x;
+  x=analogRead(A0);
+  Serial.println(x);
+  delay(400);
+
+  int light;
+  light = analogRead(A0);
+  Serial.println(light);
+  delay(1000);
+  
+  if(light>505)
+  {
+    digitalWrite(2,HIGH);
+  }
+  else
+  {
+    digitalWrite(2,LOW);
+  }
+}
+
